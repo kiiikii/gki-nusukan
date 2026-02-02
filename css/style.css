@@ -432,3 +432,9 @@
     padding-right: 0;
     border-right: none;
 }
+
+@media (max-width: 768px) {
+    .header-carousel .owl-nav {
+        display: none !important;
+    }
+}
