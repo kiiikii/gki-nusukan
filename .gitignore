@@ -1,0 +1,19 @@
+# Dependency
+/vendor/
+
+# Database & Sensitive Files
+.env
+*.db
+/database/*.db
+.htaccess
+
+# Log files
+*.log
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# IDE Settings
+.vscode/
+.idea/
