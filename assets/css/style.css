@@ -309,9 +309,28 @@
   transform: scale(1.1);
 }
 
+.d-webkit-box-truncate {
+  display: -webkit-box !important;
+  line-clamp: 3;
+  -webkit-line-clamp: 3; /* Teks akan dipotong di baris ketiga */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
 /*** Team ***/
 .team-item img {
   transition: 0.5s;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Rasio potret yang ideal untuk foto orang */
+  object-fit: cover; /* Memastikan foto memenuhi kotak tanpa gepeng */
+}
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .team-item:hover img {
