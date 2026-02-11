@@ -153,6 +153,11 @@
 
 /*** Header carousel ***/
 @media (max-width: 768px) {
+  .hero-header,
+  .custom-img {
+    height: 500px !important;
+  }
+
   .header-carousel .owl-carousel-item {
     position: relative;
     min-height: 500px;
@@ -168,6 +173,24 @@
   .header-carousel .owl-nav {
     display: none !important;
   }
+}
+
+/* Mengatur tinggi area Carousel agar tidak terlalu tinggi (misal 70% layar) */
+.hero-header {
+  height: 95vh !important;
+  min-height: 450px;
+}
+
+/* Memastikan gambar memenuhi area tanpa gepeng */
+.custom-img {
+  width: 100%;
+  height: 95vh !important;
+  object-fit: cover;
+}
+
+/* Memastikan navigasi panah tetap terlihat di atas overlay teks */
+.header-carousel .owl-nav {
+  z-index: 15;
 }
 
 .header-carousel .owl-nav {
