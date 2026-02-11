@@ -153,14 +153,9 @@
 
 /*** Header carousel ***/
 @media (max-width: 768px) {
-  .hero-header,
-  .custom-img {
-    height: 500px !important;
-  }
-
   .header-carousel .owl-carousel-item {
     position: relative;
-    min-height: 500px;
+    min-height: 95vh !important;
   }
 
   .header-carousel .owl-carousel-item img {
