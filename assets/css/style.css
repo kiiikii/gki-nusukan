@@ -274,6 +274,52 @@
   left: 0;
 }
 
+/*** About ***/
+/* CSS untuk dekorasi gambar About */
+.custom-overlay {
+    position: absolute;
+    background-image: url('../img/overlay-top.png'); /* Sesuaikan path file kamu */
+    background-size: contain;
+    background-repeat: repeat-x;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Sisi Atas */
+.custom-overlay.top {
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+}
+
+/* Sisi Bawah */
+.custom-overlay.bottom {
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    transform: rotate(180deg);
+}
+
+/* Sisi Kiri */
+.custom-overlay.left {
+    top: 50%;
+    left: -198px; /* Atur angka ini jika kurang pas */
+    width: 430px; /* Panjangnya mengikuti tinggi gambar */
+    height: 35px;
+    transform: translateY(-50%) rotate(270deg);
+}
+
+/* Sisi Kanan */
+.custom-overlay.right {
+    top: 50%;
+    right: -198px; /* Atur angka ini jika kurang pas */
+    width: 430px;
+    height: 35px;
+    transform: translateY(-50%) rotate(90deg);
+}
+
 /*** Service ***/
 .service-item {
   background: var(--light);

@@ -125,7 +125,7 @@
         class="navbar-brand d-flex align-items-center px-4 px-lg-5"
       >
         <h2 class="m-0 text-primary">
-          <i class="fa fa-book me-3"></i>GKI Nusukan
+          <i class="fa fa-church me-3"></i>GKI Nusukan
         </h2>
       </a>
       <button
@@ -169,9 +169,13 @@
     >
       <div
         class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
-        style="z-index: 10; background: rgba(24, 29, 56, 0.7)"
+        style="
+          z-index: 10;
+          background: rgba(24, 29, 56, 0.7);
+          pointer-events: none;
+        "
       >
-        <div class="container">
+        <div class="container" style="pointer-events: auto">
           <div class="row justify-content-start">
             <div class="col-sm-10 col-lg-8">
               <h5 class="text-primary text-uppercase mb-3 animated slideInDown">
@@ -181,8 +185,8 @@
                 Bertumbuh Bersama dalam Kasih Kristus
               </h1>
               <p class="fs-5 text-white mb-4 pb-2">
-                Visi kami adalah menjadi murid Kristus yang rendah hati dan
-                memiliki semangat yang giat dalam menjalankan misi Allah.
+                Visi kami adalah menjadi murid Kristus yang rendah hati dan giat
+                bermisi.
               </p>
               <a
                 href=""
@@ -289,8 +293,12 @@
                 class="img-fluid position-absolute w-100 h-100"
                 src="assets/img/about.jpg"
                 alt=""
-                style="object-fit: cover"
+                style="object-fit: cover; width: 100%"
               />
+              <div class="custom-overlay top"></div>
+              <div class="custom-overlay bottom"></div>
+              <div class="custom-overlay left"></div>
+              <div class="custom-overlay right"></div>
             </div>
           </div>
           <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -360,9 +368,9 @@
       <div class="container">
         <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
           <h6 class="section-title bg-white text-center text-primary px-3">
-            Komisi & Badan Pelayanan
+            Pelayanan
           </h6>
-          <h1 class="mb-5">Kategori Pelayanan</h1>
+          <h1 class="mb-5">Komisi & Badan Pelayanan</h1>
         </div>
         <div class="row g-3">
           <div class="col-lg-7 col-md-6">
@@ -389,6 +397,7 @@
                     class="img-fluid"
                     src="assets/img/cat-2.jpg"
                     alt="Komisi Remaja"
+                    style="object-fit: cover; height: 240px"
                   />
                   <div
                     class="bg-white text-center position-absolute bottom-0 end-0 py-2 px-3"
@@ -683,7 +692,11 @@
     <!-- Testimonial End -->
 
     <!-- Map Start -->
-    <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" style="position: relative; z-index: 1;">
+    <div
+      class="container-xxl py-5 px-0 wow fadeInUp"
+      data-wow-delay="0.1s"
+      style="position: relative; z-index: 1"
+    >
       <div class="container">
         <div class="text-center">
           <h6 class="section-title bg-white text-center text-primary px-3">
