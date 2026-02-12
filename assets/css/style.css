@@ -524,5 +524,19 @@
   border-right: none;
 }
 
+.footer {
+    position: relative; /* Penting agar overlay menempel di sini */
+}
+
+.custom-overlay.bottom-footer {
+    position: absolute;
+    top: -1px; /* Menempel tepat di atas footer */
+    left: 0;
+    width: 100%;
+    height: 35px;
+    z-index: 10;
+    pointer-events: none;
+}
+
 @media (max-width: 768px) {
 }
