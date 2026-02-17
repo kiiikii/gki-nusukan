@@ -1,365 +1,572 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GKI Nusukan | Murid yang Rendah Hati dan Giat Bermisi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="title"
+      content="GKI Nusukan - Murid yang Rendah Hati dan Giat Bermisi"
+    />
+    <meta
+      name="description"
+      content="Selamat datang di website resmi GKI Nusukan. Bergabunglah dalam ibadah umum, lansia, remaja, pemuda, dan komunitas basis (Kombas) kami di Solo."
+    />
+    <meta
+      name="keywords"
+      content="GKI Nusukan, Gereja Kristen Indonesia, Gereja Solo, Ibadah Minggu Solo, Komunitas Kristen, GKI Klasis Solo"
+    />
+    <meta name="author" content="GKI Nusukan" />
 
-<head>
-    <meta charset="utf-8">
-    <title>eLEARNING - eLearning HTML Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gki-nusukan.vercel.app/" />
+    <meta
+      property="og:title"
+      content="GKI Nusukan - Murid yang Rendah Hati dan Giat Bermisi"
+    />
+    <meta
+      property="og:description"
+      content="Informasi jadwal ibadah, kegiatan jemaat, dan pelayanan kasih GKI Nusukan Solo."
+    />
+    <meta
+      property="og:image"
+      content="https://gki-nusukan.vercel.app/assets/img/about.jpg"
+    />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://gki-nusukan.vercel.app/" />
+    <meta property="twitter:title" content="GKI Nusukan" />
+    <meta
+      property="twitter:description"
+      content="Informasi jadwal ibadah dan kegiatan jemaat GKI Nusukan Solo."
+    />
+    <meta
+      property="twitter:image"
+      content="https://gki-nusukan.vercel.app/assets/img/about.jpg"
+    />
+    <meta
+      name="google-site-verification"
+      content="g-wOw5fokb-ZUUeRovumpg5TrUc_Edn40LG1PHe2n70"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Church",
+        "name": "GKI Nusukan",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Sriwijaya Timur II Prawit No.6, Nusukan, Kec. Banjarsari, Kota Surakarta",
+          "addressLocality": "Solo",
+          "addressRegion": "Jawa Tengah",
+          "postalCode": "57135",
+          "addressCountry": "ID"
+        },
+        "url": "https://gki-nusukan.vercel.app"
+      }
+    </script>
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="../assets/img/g4028.png" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../assets/lib/animate/animate.min.css" rel="stylesheet" />
+    <link
+      href="../assets/lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="../assets/css/style.css" rel="stylesheet" />
+  </head>
 
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
-        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>eLEARNING</h2>
-        </a>
-        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link active">About</a>
-                <a href="courses.html" class="nav-item nav-link">Courses</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-down m-0">
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+    >
+      <a
+        href="../index.html"
+        class="navbar-brand d-flex align-items-center px-4 px-lg-5"
+      >
+        <h2 class="m-0 text-primary">
+          <img
+            src="../assets/img/g4028.png"
+            alt="Logo GKI Nusukan"
+            style="height: 40px; width: auto"
+            class="me-3"
+          />GKI Nusukan
+        </h2>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler me-4"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="../index.html" class="nav-item nav-link">Home</a>
+          <a href="pages/404.html" class="nav-item nav-link active"
+            >Sejarah Gereja</a
+          >
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Pelayanan</a
+            >
+            <div class="dropdown-menu fade-down m-0">
+              <a href="pages/404.html" class="dropdown-item"
+                >Para Pelayan Tuhan</a
+              >
+              <a href="pages/404.html" class="dropdown-item">Testimonial</a>
+              <a href="404.html" class="dropdown-item">Diakonia</a>
+              <a href="404.html" class="dropdown-item">Literasi</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a>
+          </div>
+          <a href="pages/404.html" class="nav-item nav-link">Contact</a>
         </div>
+      </div>
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Header Start -->
     <div class="container-fluid bg-primary py-5 mb-5 page-header">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center">
-                    <h1 class="display-3 text-white animated slideInDown">About Us</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+      <div class="container py-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h1 class="display-3 text-white animated slideInDown">About Us</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item">
+                  <a class="text-white" href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="text-white" href="#">Pages</a>
+                </li>
+                <li
+                  class="breadcrumb-item text-white active"
+                  aria-current="page"
+                >
+                  About
+                </li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Header End -->
 
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-graduation-cap text-primary mb-4"></i>
-                            <h5 class="mb-3">Skilled Instructors</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-globe text-primary mb-4"></i>
-                            <h5 class="mb-3">Online Classes</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-home text-primary mb-4"></i>
-                            <h5 class="mb-3">Home Projects</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="service-item text-center pt-3">
-                        <div class="p-4">
-                            <i class="fa fa-3x fa-book-open text-primary mb-4"></i>
-                            <h5 class="mb-3">Book Library</h5>
-                            <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- About Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="img-fluid position-absolute w-100 h-100" src="img/about.jpg" alt="" style="object-fit: cover;">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <h6 class="section-title bg-white text-start text-primary pe-3">About Us</h6>
-                    <h1 class="mb-4">Welcome to eLEARNING</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                    <div class="row gy-2 gx-4 mb-4">
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Skilled Instructors</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Online Classes</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>International Certificate</p>
-                        </div>
-                    </div>
-                    <a class="btn btn-primary py-3 px-5 mt-2" href="">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-
     <!-- Team Start -->
     <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h6 class="section-title bg-white text-center text-primary px-3">Instructors</h6>
-                <h1 class="mb-5">Expert Instructors</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-1.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-2.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-3.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-item bg-light">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/team-4.jpg" alt="">
-                        </div>
-                        <div class="position-relative d-flex justify-content-center" style="margin-top: -23px;">
-                            <div class="bg-light d-flex justify-content-center pt-2 px-1">
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-sm-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
-                        <div class="text-center p-4">
-                            <h5 class="mb-0">Instructor Name</h5>
-                            <small>Designation</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+          <h6 class="section-title bg-white text-center text-primary px-3">
+            About GKI Nusukan
+          </h6>
+          <h1 class="mb-5">Sejarah Singkat GKI Nusukan</h1>
         </div>
+        <div class="row g-5">
+          <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+            <img
+              class="img-fluid rounded w-100 mb-4"
+              src="assets/img/sejarah-gki.jpg"
+              alt="Foto Gedung GKI Nusukan Tempo Dulu"
+              style="object-fit: cover; max-height: 400px"
+            />
+
+            <div class="sejarah-content text-dark">
+              <p>
+                GKI Nusukan pada awalnya adalah sebuah proyek kerja sama GKI
+                Sangkrah dan GKI Coyudan. Pada bulan Februari 1964 diadakan
+                kebaktian yang bertempat di poliklinik Panti Waluyo Nusukan,
+                yang dihadiri oleh sekitar 50 orang. Ternyata, pengunjung
+                kebaktian makin bertambah sehingga pada Desember 1964 tempat
+                kebaktian dipindahkan ke JL. Colomadu Utara 27, milik keluarga
+                Bpk. Puspoatmadja, warga GKJ Nusukan.
+              </p>
+
+              <p>
+                Sakramen baptisan pertama dilakukan pada tanggal 20 Desember
+                1964 dan salah seorang yang telah dibaptis, yakni Sdr. Tan Ping
+                An, menyerahkan rumahnya di Jl. Bonorejo Nusukan untuk dijadikan
+                tempat kebaktian berikutnya. Dengan makin bertumbuhnya jemaat,
+                maka dilayanilah kelompok katekisasi dan dibentuklah
+                komisi-komisi. Kemudian, pada tahun 1971 jemaat memanggil Sdr.
+                John Augustinus Prajogo (Go Gie Djiang) sebagai pengerjanya yang
+                pertama. Selanjutnya, dibentuklah Panitia Gereja Gabungan
+                Sangkrah, Coyudan dan Nusukan, yang terdiri dari Sdr. J.A.
+                Prajogo, Sdr. Tan ping An, Sdr. Thio Khay San, Sdr. Tjan kie
+                Tjwan, Sdr. Goei Sing Hiap dan Sdr. The Kwie Djoen.
+              </p>
+
+              <p>
+                Setelah dipertimbangkan dan dipandang layak, maka didewasakanlah
+                jemaat tersebut, menjadi GKI Nusukan pada tanggal <strong>1 maret 1973</strong>.
+                Adapun susunan Majelis Jemaatnya yang pertama adalah Sdr. J.A.
+                Prajogo (Ketua), Sdr. Goei Sing Hiap (Sekretaris), Sdr. Tjan Kie
+                Tjwan (Bendahara), dengan anggota-anggotanya: Sdr. Serang, Sdr.
+                Tan Ping An, Sdr. Hadiatmadja, Sdr. Hindarto, Sdr. Thio Khay
+                San, Sdr. Ho Ik Kwan, Sdr. Lie Ik Giam, Ny. Siauw Thiam Tjing
+                dan Sdri. Liem Kiong Nio.
+              </p>
+
+              <p>
+                Dengan kepergian Sdr. J.A. Prajogo untuk menerima penggilan GKI
+                Sangkrah, hadirilah Sdr. Yosef P. Widyatmadja (Oei Ping Liang)
+                pada Juni 1973 dan melayani hingga awal tahun 1975, karena
+                beliau menerima penugasan di Yayasan Bimbingan Kesejahteraan
+                Sosial (YBKS) Solo. Baru sejak tanggal 1 Juni 1975, Pdt.
+                Hadinugraha (Oh Tjie Hap), yang sebelumnya melayani GKI
+                Temanggung, hadir di GKI Nusukan dan diteguhkan pada tanggal 20
+                Juni 1975. Beliau melayani sampai pensiun pada tanggal 3 Agustus
+                1984.
+              </p>
+
+              <p>
+                Perkembangan yang pesat mendorong jemaat untuk mencari lahan,
+                baik untuk gedung gereja, maupun untuk pastori. Kerinduan jemaat
+                ini, dengan berkat Tuhan, terwujud ketika diperoleh sebidang
+                tanah di sebelah Timur lapangan Prawit seluas 527 m2. Di sanalah
+                dibangun gedung gereja yang diresmikan penggunaannya pada
+                tanggal 14 Desember 1978. Disusul kemudian pembangunan sebuah
+                pastori yang dapat ditempati oleh keluarga Pdt. Hadinugraha pada
+                bulan Oktober 1981. Terlebih lagi, pada tahun 1990, jemaat GKI
+                Nusukan memperoleh tanah lagi, yang terletak di sebelah gedung
+                gereja seluas 516 m2, untuk pengembangan kegiatan jemaat.
+              </p>
+
+              <p>
+                Setelah Pdt. Hadinugraha pensiun, jemaat memanggil Sdr. Willy
+                Darmawan Suselo dan ditahbiskan menjadi pendeta pada tanggal 28
+                September 1988. Akan tetapi, pada bulan Agustus 1989 beliau
+                menerima panggilan untuk bertugas sebagai Sekretaris Umum YBKS.
+                Karena adanya kekosongan gembala, dipanggillah Sdr. Tyas Rudjito
+                pada Desember 1989 dan ditahbiskan menjadi pendeta pada tanggal
+                2 Februari 1993. Hingga kini jumlah anggota jemaat GKI Nusukan
+                sekitar 500 orang dan anggota baptisan sebanyak 300 orang.
+              </p>
+            </div>
+          </div>
+          <!-- Information -->
+          <div class="col-lg-4">
+            <div
+              class="card border-0 shadow-sm mb-4 wow fadeInRight"
+              data-wow-delay="0.3s"
+            >
+              <div class="card-header bg-primary text-white py-3">
+                <h5 class="mb-0 text-white">Jadwal Ibadah</h5>
+              </div>
+              <div class="card-body bg-light">
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">Ibadah Umum</span>
+                  <span>06.30 & 16.30</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">Ibadah Anak</span>
+                  <span>08.00 (Minggu)</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">Remaja</span>
+                  <span>18.00 (Sabtu)</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">Pemuda</span>
+                  <span>18.00 (Sabtu)</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">Komisi Dewasa</span>
+                  <span>19.00 (Selasa, Minggu ke-4)</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">Ibadah Lansia</span>
+                  <span>10.00 (Rabu)</span>
+                </div>
+                <div class="d-flex justify-content-between border-bottom py-2">
+                  <span class="fw-bold">Kombas</span>
+                  <span>17.00 & 19.00 (Sesuai PA Wilayah)</span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card border-0 shadow-sm mb-4 wow fadeInRight"
+              data-wow-delay="0.5s"
+            >
+              <div class="card-header bg-white py-3 text-center border-bottom">
+                <h6 class="fw-bold mb-0">Statistik Anggota Jemaat</h6>
+              </div>
+
+              <div class="card-body p-0">
+                <table class="table table-sm table-bordered mb-0 text-center">
+                  <thead class="bg-light">
+                    <tr>
+                      <th colspan="2">Sidi</th>
+                      <th colspan="2">Baptisan</th>
+                    </tr>
+                    <tr>
+                      <th>Pria</th>
+                      <th>Wanita</th>
+                      <th>Pria</th>
+                      <th>Wanita</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>254</td>
+                      <td>435</td>
+                      <td>138</td>
+                      <td>122</td>
+                    </tr>
+                    <tr class="table-primary fw-bold text-primary">
+                      <td colspan="3">Total Anggota</td>
+                      <td>949</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div
+              class="card border-0 shadow-sm wow fadeInRight"
+              data-wow-delay="0.7s"
+            >
+              <div class="card-body">
+                <h6 class="fw-bold border-bottom pb-2 mb-3">Pendeta Jemaat</h6>
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fa fa-user-tie text-primary me-3"></i>
+                  <div>
+                    <p class="mb-0 fw-bold">
+                      Pdt. Sujanto Putro Waskito Wibowo
+                    </p>
+                    <small class="text-muted">GKI Nusukan Solo</small>
+                  </div>
+                </div>
+                <div class="pt-2 border-top">
+                  <h6 class="fw-bold mb-1" style="font-size: 0.85rem">
+                    Pos / Bakal Jemaat:
+                  </h6>
+                  <p class="mb-0 text-muted" style="font-size: 0.9rem">
+                    Bajem Mojosongo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Information  End-->
+        </div>
+      </div>
     </div>
     <!-- Team End -->
-        
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Quick Link</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">FAQs & Help</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Gallery</h4>
-                    <div class="row g-2 pt-2">
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-white mb-3">Newsletter</h4>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
-                </div>
+    <div
+      class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn footer"
+      data-wow-delay="0.1s"
+    >
+      <div class="custom-overlay bottom-footer"></div>
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Tautan Cepat</h4>
+            <a class="btn btn-link" href="pages/404.html">Tentang Kami</a>
+            <a class="btn btn-link" href="pages/404.html">Hubungi Kami</a>
+            <a class="btn btn-link" href="">Jadwal Ibadah</a>
+            <a class="btn btn-link" href="">Warta Jemaat</a>
+            <a class="btn btn-link" href="">Kebijakan Privasi</a>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Kontak</h4>
+            <div class="d-flex mb-2">
+              <i class="fa fa-map-marker-alt me-3 mt-1"></i>
+              <span
+                >Jl. Sriwijaya Timur II Prawit No.6, Nusukan, Kec. Banjarsari,
+                Kota Surakarta, Jawa Tengah 57135</span
+              >
             </div>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>(0271) 717640
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>gkinsk.ska@gmail.com
+            </p>
+            <div class="d-flex pt-2">
+              <a
+                class="btn btn-outline-light btn-social"
+                href="mailto:gkinsk.ska@gmail.com"
+                target="_blank"
+                ><i class="fa fa-envelope"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="https://www.youtube.com/@GKINusukan"
+                target="_blank"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="https://www.instagram.com/gkinusukan"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="btn btn-outline-light btn-social"
+                href="https://wa.link/l651b9"
+                target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Gallery</h4>
+            <div class="row g-2 pt-2">
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light p-1"
+                  src="../assets/img/course-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light p-1"
+                  src="../assets/img/course-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light p-1"
+                  src="../assets/img/course-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light p-1"
+                  src="../assets/img/course-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light p-1"
+                  src="../assets/img/course-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid bg-light p-1"
+                  src="../assets/img/course-1.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-white mb-3">Newsletter</h4>
+            <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input
+                class="form-control border-0 w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                SignUp
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy; <a class="border-bottom" href="#">GKI Nusukan Solo</a>, All
+              Right Reserved.
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
-                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
-                        </div>
-                    </div>
-                </div>
+              <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+              Designed By
+              <a class="border-bottom" href="https://htmlcodex.com"
+                >HTML Codex</a
+              ><br /><br />
+              Distributed By
+              <a class="border-bottom" href="https://themewagon.com"
+                >ThemeWagon</a
+              >
             </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="footer-menu">
+                <a href="index.html">Home</a>
+                <a href="">Help</a>
+                <a href="">FAQs</a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../assets/lib/wow/wow.min.js"></script>
+    <script src="../assets/lib/easing/easing.min.js"></script>
+    <script src="../assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="../assets/lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>
