@@ -109,3 +109,54 @@
     
 })(jQuery);
 
+document.addEventListener("DOMContentLoaded", function() {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const closeBtn = document.getElementById('close-banner');
+
+    // Fungsi untuk memunculkan banner dengan halus
+    function showBanner() {
+        banner.style.visibility = "visible";
+        banner.style.opacity = "1";
+    }
+
+    // Fungsi untuk menghilangkan banner dengan halus
+    function hideBanner() {
+        banner.style.opacity = "0";
+        setTimeout(() => {
+            banner.style.visibility = "hidden";
+        }, 500); // Harus sama dengan durasi transition di CSS (0.5s)
+    }
+
+    // Cek status cookie
+    if (!getCookie("gki_cookie_consent")) {
+        // Beri jeda 1 detik setelah halaman load baru muncul (biar lebih estetik)
+        setTimeout(showBanner, 1000);
+    }
+
+    acceptBtn.addEventListener("click", function() {
+        setCookie("gki_cookie_consent", "accepted", 30);
+        hideBanner();
+    });
+
+    closeBtn.addEventListener("click", hideBanner);
+
+    // --- Fungsi Helper Cookie (Sama seperti sebelumnya) ---
+    function setCookie(name, value, days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = name + "=" + value + "; expires=" + date.toUTCString() + "; path=/; Secure; SameSite=Strict";
+    }
+
+    function getCookie(name) {
+        let nameEQ = name + "=";
+        let ca = document.cookie.split(';');
+        for(let i=0;i < ca.length;i++) {
+            let c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+});
+
