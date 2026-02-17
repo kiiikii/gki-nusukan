@@ -1,11 +1,12 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/about", "destination": "/pages/about.html" },
-    { "source": "/contact", "destination": "/pages/contact.html" },
-    { "source": "/pelayan", "destination": "/pages/404.html" },
-    { "source": "/diakonia", "destination": "/pages/404.html" },
-    { "source": "/literasi", "destination": "/pages/404.html" }
+  "routes": [
+    { "src": "/about", "dest": "/pages/about.html" },
+    { "src": "/contact", "dest": "/pages/contact.html" },
+    { "src": "/pelayan", "dest": "/pages/404.html" },
+    { "src": "/diakonia", "dest": "/pages/404.html" },
+    { "src": "/literasi", "dest": "/pages/404.html" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
