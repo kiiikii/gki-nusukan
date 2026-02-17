@@ -1,11 +1,9 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/about", "destination": "/pages/about.html" },
-    { "source": "/contact", "destination": "/pages/404.html" },
-    { "source": "/pelayan", "destination": "/pages/404.html" },
-    { "source": "/courses", "destination": "/pages/404.html" },
-    { "source": "/testimonial", "destination": "/pages/404.html" }
+    {
+      "source": "/about",
+      "destination": "/pages/about.html"
+    }
   ]
 }
