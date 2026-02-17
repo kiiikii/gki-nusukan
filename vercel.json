@@ -1,12 +1,10 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "routes": [
-    { "src": "/about", "dest": "/pages/about.html" },
-    { "src": "/contact", "dest": "/pages/contact.html" },
-    { "src": "/pelayan", "dest": "/pages/404.html" },
-    { "src": "/diakonia", "dest": "/pages/404.html" },
-    { "src": "/literasi", "dest": "/pages/404.html" },
-    { "src": "/(.*)", "dest": "/$1" }
+  "rewrites": [
+    {
+      "source": "/((?!pages/).*)",
+      "destination": "/pages/$1.html"
+    }
   ]
 }
