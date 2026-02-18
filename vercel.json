@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/about", "destination": "/pages/about" },
-    { "source": "/contact", "destination": "/pages/contact" }
+    { "source": "/contact", "destination": "/pages/contact" },
+    { "source": "/pelayan", "destination": "/pages/404" }
   ]
 }
