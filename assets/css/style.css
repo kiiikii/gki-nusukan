@@ -277,47 +277,47 @@
 /*** About ***/
 /* CSS untuk dekorasi gambar About */
 .custom-overlay {
-    position: absolute;
-    background-image: url('../img/overlay-top.png'); /* Sesuaikan path file kamu */
-    background-size: contain;
-    background-repeat: repeat-x;
-    z-index: 2;
-    pointer-events: none;
+  position: absolute;
+  background-image: url("../img/overlay-top.png"); /* Sesuaikan path file kamu */
+  background-size: contain;
+  background-repeat: repeat-x;
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* Sisi Atas */
 .custom-overlay.top {
-    top: -2px;
-    left: 0;
-    width: 100%;
-    height: 35px;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 35px;
 }
 
 /* Sisi Bawah */
 .custom-overlay.bottom {
-    bottom: -2px;
-    left: 0;
-    width: 100%;
-    height: 35px;
-    transform: rotate(180deg);
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  transform: rotate(180deg);
 }
 
 /* Sisi Kiri */
 .custom-overlay.left {
-    top: 50%;
-    left: -198px; /* Atur angka ini jika kurang pas */
-    width: 430px; /* Panjangnya mengikuti tinggi gambar */
-    height: 35px;
-    transform: translateY(-50%) rotate(270deg);
+  top: 50%;
+  left: -198px; /* Atur angka ini jika kurang pas */
+  width: 430px; /* Panjangnya mengikuti tinggi gambar */
+  height: 35px;
+  transform: translateY(-50%) rotate(270deg);
 }
 
 /* Sisi Kanan */
 .custom-overlay.right {
-    top: 50%;
-    right: -198px; /* Atur angka ini jika kurang pas */
-    width: 430px;
-    height: 35px;
-    transform: translateY(-50%) rotate(90deg);
+  top: 50%;
+  right: -198px; /* Atur angka ini jika kurang pas */
+  width: 430px;
+  height: 35px;
+  transform: translateY(-50%) rotate(90deg);
 }
 
 /*** Service ***/
@@ -369,9 +369,9 @@
 }
 
 .team-item {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .team-item:hover img {
@@ -525,18 +525,50 @@
 }
 
 .footer {
-    position: relative; /* Penting agar overlay menempel di sini */
+  position: relative; /* Penting agar overlay menempel di sini */
 }
 
 .custom-overlay.bottom-footer {
-    position: absolute;
-    top: -1px; /* Menempel tepat di atas footer */
-    left: 0;
-    width: 100%;
-    height: 35px;
-    z-index: 10;
-    pointer-events: none;
+  position: absolute;
+  top: -1px; /* Menempel tepat di atas footer */
+  left: 0;
+  width: 100%;
+  height: 35px;
+  z-index: 10;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
+
+.position-relative.h-100 {
+    min-height: 400px !important;
+    position: relative !important;
+    overflow: hidden;
+  }
+
+  /* Gambar memenuhi seluruh kotak */
+  img.about {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+
+  /* Sisi Kiri */
+  .custom-overlay.left {
+    top: 0 !important;
+    left: 0  !important; /* Atur angka ini jika kurang pas */
+    width: 0 !important; /* Panjangnya mengikuti tinggi gambar */
+    height: 0 !important;
+    transform: translateY(-50%) rotate(270deg);
+  }
+
+  /* Sisi Kanan */
+  .custom-overlay.right {
+    top: 0 !important;
+    left: 0  !important; /* Atur angka ini jika kurang pas */
+    width: 0 !important; /* Panjangnya mengikuti tinggi gambar */
+    height: 0 !important;
+    transform: translateY(-50%) rotate(90deg);
+  }
 }
