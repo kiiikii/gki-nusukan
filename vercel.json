@@ -3,6 +3,8 @@
   "rewrites": [
     { "source": "/about", "destination": "/pages/about" },
     { "source": "/contact", "destination": "/pages/contact" },
-    { "source": "/pelayan", "destination": "/pages/404" }
+    { "source": "/pelayan", "destination": "/pages/404" },
+    { "source": "/diakonia", "destination": "/pages/404" },
+    { "source": "/literasi", "destination": "/pages/404" }
   ]
 }
