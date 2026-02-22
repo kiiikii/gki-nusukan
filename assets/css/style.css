@@ -552,6 +552,30 @@
   z-index: 10;
 }
 
+/* Ikon berputar */
+[aria-expanded="true"] .transition-icon {
+    transform: rotate(180deg);
+}
+
+.transition-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Memastikan animasi bawaan Bootstrap tetap smooth tanpa flickering */
+.collapsing {
+    transition: height 0.35s ease-in-out;
+}
+
+/* Menghilangkan 'all' agar tidak merusak kalkulasi tinggi otomatis Bootstrap */
+.collapse {
+    transition: opacity 0.3s ease-out;
+}
+
+/* Opsional: Mengatur jarak antar card jika dirasa masih terlalu renggang */
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
 @media (max-width: 768px) {
   .position-relative.h-100 {
     min-height: 400px !important;
