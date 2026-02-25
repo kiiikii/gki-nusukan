@@ -79,6 +79,21 @@
     ],
   });
 
+  $(".team-carousel").owlCarousel({
+    autoplay: true,
+    smartSpeed: 2000,
+    margin: 25,
+    dots: false,
+    loop: true,
+    nav: false,
+    responsive: {
+      0: { items: 1 },
+      576: { items: 2 },
+      768: { items: 3 },
+      992: { items: 4 },
+    },
+  });
+
   async function initTestimonials() {
     try {
       const resp = await fetch("/assets/js/reviews.json");

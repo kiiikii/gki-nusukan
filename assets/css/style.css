@@ -374,21 +374,44 @@
 }
 
 /*** Team ***/
-.team-item img {
-  transition: 0.5s;
-  width: 100%;
-  aspect-ratio: 3 / 4; /* Rasio potret yang ideal untuk foto orang */
-  object-fit: cover; /* Memastikan foto memenuhi kotak tanpa gepeng */
+.team-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #f8f9fa; /* Menjaga warna bg tetap konsisten */
+    transition: 0.5s;
 }
 
-.team-item {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.team-item img {
+    transition: 0.5s;
+    width: 100%;
+    /* Pilih salah satu: height tetap atau aspect-ratio. 
+       Untuk foto Majelis, height tetap lebih aman agar barisnya rata presisi */
+    height: 380px; 
+    object-fit: cover; 
+    object-position: top;
 }
 
 .team-item:hover img {
-  transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* Mengatur posisi navigasi (Chevron) agar di tengah samping foto */
+.team-carousel {
+    position: relative;
+    padding: 0 45px; /* Memberi ruang agar tombol tidak menutupi ujung foto */
+}
+
+.team-carousel .owl-nav {
+    position: absolute;
+    top: 40%; /* Menyesuaikan posisi vertikal tombol di area foto */
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 100;
 }
 
 /*** Testimonial ***/
