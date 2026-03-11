@@ -26,7 +26,7 @@
   color: white !important;
   border-radius: 30px !important;
   transition: all 0.3s ease;
-  box-shadow: 2px 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .whatsapp-float:hover {
@@ -238,6 +238,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .page-header-inner {
@@ -373,45 +374,151 @@
   word-break: break-word;
 }
 
-/*** Team ***/
-.team-item {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background: #f8f9fa; /* Menjaga warna bg tetap konsisten */
-    transition: 0.5s;
+/*** Gallery GKI Nusukan - Final Fix ***/
+
+/* 1. Judul Utama */
+.photo-stack-container::before {
+  content: "Rabu Abu";
+  position: absolute;
+  top: -10px;
+  left: 30%;
+  transform: translateX(-50%);
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #06a3da;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  z-index: 10;
 }
 
+/* 2. Container (Memberi ruang nafas lebih luas) */
+.photo-stack-container {
+  position: relative;
+  padding: 50px 0 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 850px;
+  overflow: visible;
+}
+
+.photo-stack {
+  position: relative;
+  width: 100%;
+  max-width: 900px; /* Diperlebar agar tidak sesak */
+  height: 550px;
+}
+
+/* 3. Item Polaroid & Transisi Super Halus */
+.stack-item {
+  position: absolute;
+  background: white;
+  padding: 15px 15px 50px 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border: 1px solid #ddd;
+  width: 400px;
+  
+  /* Transisi Halus & "Kenyal" */
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.4s ease, 
+              z-index 0s;
+  
+  /* Optimasi agar tidak patah-patah */
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.stack-item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #f0f0f0;
+}
+
+.stack-item span {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  font-family: "Georgia", serif;
+  color: #222;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* 4. Efek Selotip */
+.stack-item::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 120px;
+  height: 40px;
+  background: rgba(186, 237, 189, 0.6); /* Lebih tegas sedikit */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  z-index: 15;
+}
+
+/* 5. Pengaturan Posisi (Simetris & Renggang) */
+
+/* Foto 1 (Kiri Atas) */
+.item-1 {
+  transform: rotate(-15deg);
+  z-index: 1;
+  top: 0;
+  left: -180px;
+}
+
+/* Foto 4 (Kanan Atas) */
+.item-4 {
+  transform: rotate(12deg);
+  z-index: 2;
+  top: 40px;
+  left: 220px;
+}
+
+/* Foto 3 (Tengah Bawah) */
+.item-3 {
+  transform: rotate(-5deg);
+  z-index: 3;
+  top: 220px;
+  left: -50px;
+}
+
+/* FOTO UTAMA: Penorehan Abu (Paling Depan & Tengah) */
+.item-2 {
+  transform: rotate(5deg);
+  z-index: 10;
+  top: 100px;
+  left: 100px;
+}
+
+/* 6. Hover: Efek "Diangkat" */
+.stack-item:hover {
+  transform: scale(1.08) rotate(0deg) translateY(-20px) !important;
+  z-index: 100 !important;
+  box-shadow: 0 40px 70px rgba(0, 0, 0, 0.25);
+}
+
+/*** Team ***/
 .team-item img {
-    transition: 0.5s;
-    width: 100%;
-    /* Pilih salah satu: height tetap atau aspect-ratio. 
-       Untuk foto Majelis, height tetap lebih aman agar barisnya rata presisi */
-    height: 380px; 
-    object-fit: cover; 
-    object-position: top;
+  transition: 0.5s;
+  width: 100%;
+  aspect-ratio: 3 / 4; /* Rasio potret yang ideal untuk foto orang */
+  object-fit: cover; /* Memastikan foto memenuhi kotak tanpa gepeng */
+}
+
+.team-item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .team-item:hover img {
-    transform: scale(1.1);
-}
-
-/* Mengatur posisi navigasi (Chevron) agar di tengah samping foto */
-.team-carousel {
-    position: relative;
-    padding: 0 45px; /* Memberi ruang agar tombol tidak menutupi ujung foto */
-}
-
-.team-carousel .owl-nav {
-    position: absolute;
-    top: 40%; /* Menyesuaikan posisi vertikal tombol di area foto */
-    width: 100%;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    pointer-events: none;
-    z-index: 100;
+  transform: scale(1.1);
 }
 
 /*** Testimonial ***/
@@ -574,42 +681,42 @@
   pointer-events: none;
 }
 
-.page-header-overlay {
-  position: relative;
-  overflow: hidden; /* Penting agar overlay tidak 'balapan' keluar jalur */
-}
-
 .custom-overlay.header-bottom {
   position: absolute;
-  bottom: 522px;
+  /* Gunakan top 100% untuk menaruhnya tepat di akhir container header */
+  top: 91%;
+  left: 0;
   width: 100%;
-  height: 35px; /* -1px untuk menghilangkan celah putih tipis */
+  height: 60px;
+  /* Geser ke atas sedikit (setengah dari tingginya) agar menyatu dengan header */
+  margin-top: -30px;
   transform: rotate(180deg);
   z-index: 10;
+  pointer-events: none;
 }
 
 /* Ikon berputar */
 [aria-expanded="true"] .transition-icon {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .transition-icon {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 /* Memastikan animasi bawaan Bootstrap tetap smooth tanpa flickering */
 .collapsing {
-    transition: height 0.35s ease-in-out;
+  transition: height 0.35s ease-in-out;
 }
 
 /* Menghilangkan 'all' agar tidak merusak kalkulasi tinggi otomatis Bootstrap */
 .collapse {
-    transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
 }
 
 /* Opsional: Mengatur jarak antar card jika dirasa masih terlalu renggang */
 .mb-3 {
-    margin-bottom: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 @media (max-width: 768px) {
@@ -646,15 +753,39 @@
   }
 
   .custom-overlay.header-bottom {
-    bottom: 534px;
+    top: 58%;
     left: 0;
     width: 100%;
-    height: 35px;
+    height: 60px;
+    /* Geser ke atas sedikit (setengah dari tingginya) agar menyatu dengan header */
+    margin-top: -30px;
     transform: rotate(180deg);
+    z-index: 10;
+    pointer-events: none;
   }
 
   .whatsapp-float {
     right: 20px;
     bottom: 20px;
+  }
+
+  .photo-stack-container {
+    min-height: auto;
+    padding: 100px 20px 50px;
+  }
+  .photo-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    gap: 60px;
+  }
+  .stack-item {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    width: 100%;
+    max-width: 350px;
   }
 }
